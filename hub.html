@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Hubungi</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
@@ -30,27 +30,37 @@
       <div class="nama">Email</div>
       <div class="hub">maulanaramadhan3010@gmail.com</div>
     </div>
-    <form class="KirimPesan">
+    <form class="KirimPesan" id="ContactForm">
       <div class="head">Kirim Pesan</div>
 
-      <label for="nama">Nama Lengkap</label>
-      <input type="text" name="nama" id="nama" placeholder="Masukkan Nama Anda">
+      <div>
+        <label for="nama">Nama Lengkap</label>
+        <input type="text" name="nama" id="nama" placeholder="Masukkan Nama Anda" required>
+      </div>
 
-      <label for="email">Email</label>
-      <input type="text" name="email" id="email" placeholder="Masukkan Nomor Telepon Anda">
+      <div>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Masukkan Email Anda" required>
+      </div>
 
-      <label for="tipe">subjek</label>
-      <select type="text" name="tipe" id="tipe" placeholder="Masukkan Subjek">
-        <option value="project">Penawaran Proejct</option>
-        <option value="collaboration">Kolaborasi</option>
-        <option value="freelance">Freelance</option>
-        <option value="other">Lainnya</option>
-      </select>
+      <div>
+        <label for="tipe">Subjek</label>
+        <select name="tipe" id="tipe" required>
+          <option value="">-- Pilih Subjek --</option>
+          <option value="project">Penawaran Project</option>
+          <option value="collaboration">Kolaborasi</option>
+          <option value="freelance">Freelance</option>
+          <option value="other">Lainnya</option>
+        </select>
+      </div>
 
-      <label for="pesan">Pesan</label>
-      <textarea name="pesan" id="pesan"></textarea>
+      <div>
+        <label for="pesan">Pesan</label>
+        <textarea name="pesan" id="pesan" placeholder="Tulis pesan Anda di sini..." required></textarea>
+      </div>
 
-      <button type="button">Kirimn Pesan</button>
+      <div class="form-status" id="formStatus"></div>
+      <button type="submit" id="submitBtn">Kirim Pesan</button>
     </form>
     <footer>
       <div class="head">
