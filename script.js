@@ -111,7 +111,26 @@ function showFormStatus(message, type) {
 }
 
 document.querySelectorAll(".navCard.close").forEach((link) => {
-    link.addEventListener("click", () => {
-        window.open(link.children[0].href, "_self");
-    });
+  link.addEventListener("click", () => {
+    window.open(link.children[0].href, "_self");
+  });
 });
+
+let vount = 0;
+tlt.addEventListener("click", () => { vount++; changeGame() });
+trt.addEventListener("click", () => { vount--; changeGame() });
+const el = document.querySelectorAll(".conProjek");
+function changeGame() {
+  console.log(vount%2);
+  el.forEach((e) => (e.style.display = "none"));
+  el[Math.abs(vount%2)].style.display = "block";
+  if (vount % 2 === 0) {
+    isPause1 = false;
+    isPause2 = true;
+    update();
+  } else {
+    isPause1 = true;
+    isPause2 = false;
+    loop();
+  }
+}

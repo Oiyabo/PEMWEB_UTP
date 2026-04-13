@@ -1,4 +1,7 @@
+const game = document.getElementById("game1");
 const ctx = game.getContext("2d");
+
+let isPause1 = false;
 
 const GRID_SIZE = 25;
 const TILE_SIZE = 30;
@@ -319,6 +322,8 @@ function drawGameOverState() {
 }
 
 function update() {
+  if (isPause1) return;
+
   if (!gameOver && collectedPoints.size < 5) {
     updateEnemies();
   }
