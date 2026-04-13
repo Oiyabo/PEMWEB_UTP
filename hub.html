@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <nav>
+    <div id="navocBtn">
+      <div id="beranda" class="navCard close"><a href="index.html">beranda</a></div>
+      <div id="tentang" class="navCard close"><a href="ttg.html">tentang</a></div>
+      <div id="proyek" class="navCard close"><a href="prj.html">proyek</a></div>
+      <div id="blog" class="navCard close"><a href="blg.html">blog</a></div>
+      <div id="hubungi" class="navCard close"><a href="">hubungi</a></div>
+    </div>
+    <div id="navocBg"></div>
+  </nav>
+  <main>
+    <div class="headHub">
+      <div class="name">Hubungan Saya</div>
+      <div class="desc">Ada Saran, ketik saja</div>
+    </div>
+    <div class="cardHub">
+      <div class="logo"></div>
+      <div class="nama">Email</div>
+      <div class="hub">maulanaramadhan3010@gmail.com</div>
+    </div>
+    <form class="KirimPesan">
+      <div class="head">Kirim Pesan</div>
+
+      <label for="nama">Nama Lengkap</label>
+      <input type="text" name="nama" id="nama" placeholder="Masukkan Nama Anda">
+
+      <label for="email">Email</label>
+      <input type="text" name="email" id="email" placeholder="Masukkan Nomor Telepon Anda">
+
+      <label for="tipe">subjek</label>
+      <select type="text" name="tipe" id="tipe" placeholder="Masukkan Subjek">
+        <option value="project">Penawaran Proejct</option>
+        <option value="collaboration">Kolaborasi</option>
+        <option value="freelance">Freelance</option>
+        <option value="other">Lainnya</option>
+      </select>
+
+      <label for="pesan">Pesan</label>
+      <textarea name="pesan" id="pesan"></textarea>
+
+      <button type="button">Kirimn Pesan</button>
+    </form>
+    <footer>
+      <div class="head">
+        <div class="name">Maulana Ramadhan</div>
+        <div class="brief">Mahasiswa Ilmu Komputer</div>
+      </div>
+      <div class="follow">
+        <div class="github"><img src="img/gh.svg"></div>
+        <div class="name">Kunjungi Saya</div>
+      </div>
+      <hr />
+      <div class="cp">&copy; Maulana Ramadhan. All rights reserved.</div>
+    </footer>
+  </main>
+</body>
+
+</html>
