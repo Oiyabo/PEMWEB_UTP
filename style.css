@@ -59,6 +59,21 @@ nav {
       transform: translate(10px, -50%) scale(0.95);
     }
   }
+
+  #navDiamond {
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(
+      135deg,
+      var(--primary-color),
+      var(--secondary-color)
+    );
+    transform: rotate(45deg);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    pointer-events: none;
+  }
+
   #navocBg {
     background-color: transparent;
     width: 50px;
@@ -153,6 +168,12 @@ main {
       padding: 2px;
       box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
       object-fit: cover;
+      transition: all 0.3s ease;
+    }
+
+    #mainPP:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 32px rgba(102, 126, 234, 0.4);
     }
 
     h1 {
@@ -298,7 +319,7 @@ main {
       justify-content: space-between;
       gap: 10px;
       flex-wrap: wrap;
-      
+
       .kiri {
         font-size: 24px;
         font-weight: 700;
@@ -367,6 +388,7 @@ main {
     padding-bottom: 10px;
     line-height: 1.6;
     color: var(--text-color);
+    text-align: center;
   }
   .foot {
     align-self: center;
@@ -568,6 +590,9 @@ main {
       );
       border-radius: var(--border-radius) var(--border-radius) 0 0;
       object-fit: cover;
+      background-size: cover; 
+      background-position: center; 
+      background-repeat: no-repeat; 
     }
     .content {
       display: flex;

@@ -7,7 +7,7 @@ const GRID_SIZE = 25;
 const TILE_SIZE = 30;
 const CANVAS_WIDTH = GRID_SIZE * TILE_SIZE;
 const CANVAS_HEIGHT = GRID_SIZE * TILE_SIZE;
-const ENEMY_MOVE_INTERVAL = 50;
+const ENEMY_MOVE_INTERVAL = 100;
 const TOTAL_ENEMY = 1;
 
 game.width = CANVAS_WIDTH;
@@ -293,6 +293,22 @@ function drawEnemies() {
   }
 }
 
+function drawPoint() {
+  for (let point of points) {
+    if (collectedPoints.has(point.id)) continue;
+    ctx.fillStyle = "#ffeb3b";
+    ctx.beginPath();
+    ctx.arc(
+      point.x * TILE_SIZE + TILE_SIZE / 2,
+      point.y * TILE_SIZE + TILE_SIZE / 2,
+      TILE_SIZE / 4,
+      0,
+      Math.PI * 2
+    );
+    ctx.fill();
+  }
+}
+
 function drawGameOverState() {
   if (gameOver) {
     ctx.fillStyle = "rgba(0, 0, 0, 0.7)";
@@ -330,6 +346,7 @@ function update() {
 
   drawBackground();
   drawGrid();
+  drawPoint();
   drawSurroundings();
   drawPlayer();
   drawEnemies();
